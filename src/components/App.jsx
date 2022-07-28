@@ -9,10 +9,9 @@ state = {
   neutral: 0,
   bad: 0,
   }
-  handleBtnClick =() => this.setState((prevState) => {
-      return { good: prevState.good + 1 }
-    })
-  
+  handleBtnClick =() =>{
+    return this.setState({ good: this.state.good +1})
+  }
   render(){
   return (
     <div 

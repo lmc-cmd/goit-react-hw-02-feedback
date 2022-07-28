@@ -3,7 +3,7 @@ const FeedbackOptions = (state, handleBtnClick) => {
     <>
       <h1>Please leave feedback</h1>
       <div>
-              <button type="button" onClick={() => { handleBtnClick() }}>Good</button>
+              <button onClick={() => {handleBtnClick()}} type="button" >Good</button>
         <button type="button">Netural</button>
         <button type="button">Bad</button>
       </div>
