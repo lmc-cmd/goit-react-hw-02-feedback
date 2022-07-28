@@ -13,14 +13,12 @@ state = {
   }
   handleBtnClick =() =>{
     this.setState({ good: this.state.good +1}) 
+    // this.total += 1
     
   }
-// handleCountDecrement = () => {
-//     this.setState((prevState) => {
-//       return { count: prevState.count - 10 };
-//     });
+
   countTotalFeedback = () => {
-    this.setState((prevState) => { this.total= this.prevState.bad + this.prevState.good + this.prevState.neutral})
+    // this.setState((prevState) => { this.total= this.prevState.bad + this.prevState.good + this.prevState.neutral})
     // this.setState({ total: this.state.bad + this.state.good + this.state.neutral})
     this.total = this.state.good + this.state.bad + this.state.neutral
   }

@@ -4,7 +4,7 @@ const Statistics = ({ state, total, positivPercent, countTotalFeedback}) => {
         <p >Good: {state.good}</p>
         <p>Netural: {state.neutral}</p>
         <p>Bad: {state.bad}</p>
-        <p onChange={countTotalFeedback()}>Total: {total}</p>
+        <p >Total: {total}</p>
         <p>Positive feedback: {positivPercent}</p>
 </div>
 }
