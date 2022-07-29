@@ -12,24 +12,15 @@ export class App extends Component {
     bad: 0,
   };
   handleBtnClick = event => {
-    const path = event.target.attributes.datatype.nodeValue;
-    if (path === 'Good') {
-      this.setState({ good: this.state.good + 1 });
-    }
-    if (path === 'Neutral') {
-      this.setState({ neutral: this.state.neutral + 1 });
-    }
-    if (path === 'Bad') {
-      this.setState({ bad: this.state.bad + 1 });
-    }
+     const targetBtn = event.target.attributes.datatype.nodeValue
+     this.setState({ [targetBtn]: this.state[targetBtn] + 1 });
   };
   countTotalFeedback = () => {
     this.total = this.state.good + this.state.bad + this.state.neutral;
   };
 
   countPositiveFeedbackPercentage = () => {
-    // if (this.state.bad === 0) {
-    // }
+    if (this.state.good !== 0)
     this.positivePercentage = ((this.state.good / this.total) * 100).toFixed(2);
   };
 
