@@ -1,6 +1,7 @@
 import { Component } from "react"
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
+// import Section from "./Section/Section"
 
 
 export class App extends Component  {
@@ -14,7 +15,6 @@ state = {
   handleBtnClick =() =>{
     this.setState({ good: this.state.good +1}) 
     // this.total += 1
-    
   }
 
   countTotalFeedback = () => {
@@ -24,7 +24,7 @@ state = {
   }
 
   countPositiveFeedbackPercentage = () =>{
-  this.positivPercent = this.state.total / this.state.bad}
+  this.positivPercent = this.total / this.state.bad}
 
 //   handleChange = e => {
 //     this.countTotalFeedback()
@@ -45,7 +45,8 @@ state = {
         flexDirection: 'column'
       }}
     >
-      <FeedbackOptions state={this.state} handleBtnClick={this.handleBtnClick}   />
+      {/* <Section /> */}
+      <FeedbackOptions state={this.state} handleBtnClick={this.handleBtnClick} countTotalFeedback={this.countTotalFeedback}   />
       <Statistics state={this.state} total={this.total} countTotalFeedback={this.countTotalFeedback} />
     </div>
   );}

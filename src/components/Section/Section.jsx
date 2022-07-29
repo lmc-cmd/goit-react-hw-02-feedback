@@ -1,5 +1,4 @@
-// const { default: Statistics } = require("components/Statistics/Statistics")
-
-// const Section = () => {
-//     return 
+// const Section = (title="", {children}) => {
+//     return children
 // }
+// export default Section
