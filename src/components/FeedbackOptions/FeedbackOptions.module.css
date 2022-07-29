@@ -1,6 +1,11 @@
-.feddBtn{
-    margin: 0 5px;
-    cursor: pointer;
-    width: 80px;
-    height: 40px;
+.feddBtn {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+}
+.feedBack-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

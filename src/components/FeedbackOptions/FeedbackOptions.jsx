@@ -5,8 +5,7 @@ const FeedbackOptions = ({ handleBtnClick }) => {
 
   return (
     <>
-      <h1>Please leave feedback</h1>
-      <div >
+      <div className={s["feedBack-container"]}>
         <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="good">Good</button>
         <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="neutral">Neutral</button>
         <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="bad">Bad</button>
@@ -16,7 +15,6 @@ const FeedbackOptions = ({ handleBtnClick }) => {
 };
 
 FeedbackOptions.propTypes = {
-  state: PropTypes.object.isRequired,
   handleBtnClick: PropTypes.func.isRequired
 }
 
