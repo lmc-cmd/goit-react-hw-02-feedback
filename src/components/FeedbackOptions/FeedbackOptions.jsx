@@ -1,12 +1,12 @@
-const FeedbackOptions = ({ state, handleBtnClick, countTotalFeedback }) => {
+const FeedbackOptions = ({ handleBtnClick}) => {
 
   return (
     <>
       <h1>Please leave feedback</h1>
       <div >
-        <button onClick={handleBtnClick} onChange={countTotalFeedback()} type="button">Good</button>
-        <button  type="button">Netural</button>
-        <button type="button">Bad</button>
+        <button onClick={handleBtnClick} type="button" datatype="Good">Good</button>
+        <button onClick={handleBtnClick} type="button" datatype="Neutral">Neutral</button>
+        <button onClick={handleBtnClick} type="button" datatype="Bad">Bad</button>
       </div>
     </>
   );
