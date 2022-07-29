@@ -35,7 +35,7 @@ export class App extends Component {
       <div className={s['main-container']}>
         <Section Section title="Please leave feedback">
           <FeedbackOptions
-            state={this.state}
+            // state={this.state}
             handleBtnClick={this.handleBtnClick}
           />
         </Section>
