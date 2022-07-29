@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
-// import Section from "./Section/Section"
+import s from './App.module.css';
 
 export class App extends Component {
   total = 0;
@@ -28,16 +28,8 @@ export class App extends Component {
     this.countTotalFeedback();
     this.countPositiveFeedbackPercentage();
     return (
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-          flexDirection: 'column',
-        }}
+      <div className={s["main-container"]}
+ 
       >
         {/* <Section /> */}
         <FeedbackOptions
@@ -48,8 +40,6 @@ export class App extends Component {
           state={this.state}
           total={this.total}
           positivePercentage={this.positivePercentage}
-          countTotalFeedback={this.countTotalFeedback}
-          countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage}
         />
       </div>
     );
