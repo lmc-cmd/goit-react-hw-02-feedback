@@ -6,15 +6,15 @@ const FeedbackOptions = ({ options, handleBtnClick }) => {
   return (
     <>
       <div className={s['feedBack-container']}>
-        {options.map(el => (
+        {options.map(stateEl => (
           <button
             key={nanoid()}
             className={s['feddBtn']}
             onClick={handleBtnClick}
             type="button"
-            datatype={el}
+            datatype={stateEl}
           >
-            {el}
+            {stateEl}
           </button>
         ))}
       </div>
