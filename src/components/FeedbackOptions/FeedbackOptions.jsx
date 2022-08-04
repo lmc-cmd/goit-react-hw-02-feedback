@@ -1,21 +1,29 @@
-import PropTypes from 'prop-types'
+import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import s from '../FeedbackOptions/FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ handleBtnClick }) => {
-
+const FeedbackOptions = ({ options, handleBtnClick }) => {
   return (
     <>
-      <div className={s["feedBack-container"]}>
-        <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="good">Good</button>
-        <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="neutral">Neutral</button>
-        <button className={s["feddBtn"]} onClick={handleBtnClick} type="button" datatype="bad">Bad</button>
+      <div className={s['feedBack-container']}>
+        {options.map(el => (
+          <button
+            key={nanoid()}
+            className={s['feddBtn']}
+            onClick={handleBtnClick}
+            type="button"
+            datatype={el}
+          >
+            {el}
+          </button>
+        ))}
       </div>
     </>
   );
 };
 
 FeedbackOptions.propTypes = {
-  handleBtnClick: PropTypes.func.isRequired
-}
+  handleBtnClick: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;

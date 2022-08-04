@@ -35,16 +35,15 @@ export class App extends Component {
       <div className={s['main-container']}>
         <Section Section title="Please leave feedback">
           <FeedbackOptions
-            // state={this.state}
+            options={Object.keys(this.state)}
             handleBtnClick={this.handleBtnClick}
           />
         </Section>
         <Section Section title="Statistics">
-          {this.total === 0
-            ? (
-              <h3>There is no feedback</h3>)
-            : (
-              <Statistics
+          {this.total === 0 ? (
+            <h3>There is no feedback</h3>
+          ) : (
+            <Statistics
               state={this.state}
               total={this.total}
               positivePercentage={this.positivePercentage}
